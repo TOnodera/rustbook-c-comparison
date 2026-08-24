@@ -21,6 +21,7 @@ if missing:
     sys.exit("SUMMARY.md の参照先がありません:\n" + "\n".join(f"- {p}" for p in missing))
 
 errors = []
+include_count = 0
 markdown_files = sorted(src.rglob("*.md"))
 for path in markdown_files:
     body = path.read_text(encoding="utf-8")
@@ -28,9 +29,19 @@ for path in markdown_files:
         errors.append(f"{path.relative_to(root)}: バッククォートのコードフェンスが閉じていません")
     if body.count("~~~") % 2:
         errors.append(f"{path.relative_to(root)}: チルダのコードフェンスが閉じていません")
+    for target in re.findall(r"\{\{#(?:rustdoc_)?include\s+([^}:]+)", body):
+        include_count += 1
+        include_path = (path.parent / target).resolve()
+        if not include_path.is_file():
+            errors.append(
+                f"{path.relative_to(root)}: include参照先がありません: {target}"
+            )
 
 if errors:
     sys.exit("\n".join(errors))
 
-print(f"OK: SUMMARY.md の参照 {len(targets)} 件と Markdown {len(markdown_files)} ファイルを確認しました")
+print(
+    f"OK: SUMMARY.md の参照 {len(targets)} 件、Markdown {len(markdown_files)} "
+    f"ファイル、include参照 {include_count} 件を確認しました"
+)
 PY
