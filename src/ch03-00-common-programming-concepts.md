@@ -16,7 +16,7 @@
 > いくつかは、紐付けられた機能がないものの、将来Rustに追加されるかもしれない機能用に予約されています。
 > キーワードの一覧は、[付録A][appendix_a]で確認できます。
 
-[appendix_a]: appendix-01-keywords.md
+[appendix_a]: https://doc.rust-lang.org/book/appendix-01-keywords.html
 
 > **C言語との比較**
 >
