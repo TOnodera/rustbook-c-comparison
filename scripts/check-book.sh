@@ -6,7 +6,7 @@ from pathlib import Path
 import re
 import sys
 
-root = Path.cwd()
+root = Path.cwd().resolve()
 src = root / "src"
 summary = src / "SUMMARY.md"
 
