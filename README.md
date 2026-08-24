@@ -20,6 +20,8 @@ Rust公式書籍『The Rust Programming Language』を、省略せず自然な�
 
 詳細は[翻訳ガイド](TRANSLATION_GUIDE.md)と[用語集](GLOSSARY.md)を参照してください。
 
+翻訳に使用した原著と既存日本語訳については、[翻訳の帰属](ATTRIBUTION.md)を参照してください。
+
 ## ローカルでの確認
 
 mdBook 0.4.52をインストールします。
