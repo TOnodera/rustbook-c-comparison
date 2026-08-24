@@ -177,5 +177,4 @@ Rustは実行前にコンパイルする*AOTコンパイル*（ahead-of-time）�
 
 
 [troubleshooting]: ch01-01-installation.html#トラブルシューティング
-[devtools]: appendix-04-useful-development-tools.html
-
+[devtools]: https://doc.rust-lang.org/book/appendix-04-useful-development-tools.html

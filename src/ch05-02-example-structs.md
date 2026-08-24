@@ -200,10 +200,9 @@ Rustは必要なものを推測しようとせず、構造体は`println!`と`{}
 このコードをリファクタリングし続けられる方法について見ていきましょう。
 
 [the-tuple-type]: ch03-02-data-types.html#タプル型
-[app-c]: appendix-03-derivable-traits.md
+[app-c]: https://doc.rust-lang.org/book/appendix-03-derivable-traits.html
 [println]: https://doc.rust-lang.org/std/macro.println.html
 [dbg]: https://doc.rust-lang.org/std/macro.dbg.html
 [err]: ch12-06-writing-to-stderr-instead-of-stdout.html
 [attributes]: https://doc.rust-lang.org/reference/attributes.html
-
 

@@ -397,7 +397,6 @@ Rustもこの慣例に従い、実行可能ファイルから整数を返しま�
 どんな場合にどちらを使うのが適切か決める方法についての話に戻りましょう。
 
 [handle_failure]: ch02-00-guessing-game-tutorial.html#resultで失敗の可能性を扱う
-[trait-objects]: ch17-02-trait-objects.html#トレイトオブジェクトで異なる型の値を許容する
+[trait-objects]: ch18-02-trait-objects.html#トレイトオブジェクトで共通の振る舞いを抽象化する
 [termination]: https://doc.rust-lang.org/std/process/trait.Termination.html
-
 

@@ -419,7 +419,7 @@ Rustでは、タプルを使って複数の値を返すことができます。�
 [data-types]: ch03-02-data-types.html#データ型
 [ch8]: ch08-02-strings.html
 [traits]: ch10-02-traits.html
-[derivable-traits]: appendix-03-derivable-traits.html
+[derivable-traits]: https://doc.rust-lang.org/book/appendix-03-derivable-traits.html
 [method-syntax]: ch05-03-method-syntax.html#メソッド記法
 [paths-module-tree]: ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html
 [drop]: https://doc.rust-lang.org/std/ops/trait.Drop.html#tymethod.drop

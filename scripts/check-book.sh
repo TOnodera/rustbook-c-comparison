@@ -22,6 +22,7 @@ if missing:
 
 errors = []
 include_count = 0
+local_link_count = 0
 markdown_files = sorted(src.rglob("*.md"))
 for path in markdown_files:
     body = path.read_text(encoding="utf-8")
@@ -43,12 +44,31 @@ for path in markdown_files:
             errors.append(
                 f"{path.relative_to(root)}: include参照先がありません: {target}"
             )
+    local_links = re.findall(r"\]\(([^)]+)\)", body)
+    local_links.extend(
+        re.findall(r"^\[[^]]+\]:\s*(\S+)", body, flags=re.MULTILINE)
+    )
+    for target in local_links:
+        target = target.split("#", 1)[0]
+        if not target or "://" in target or target.startswith(("mailto:", "#")):
+            continue
+        if not target.endswith((".md", ".html")):
+            continue
+        local_link_count += 1
+        link_path = path.parent / target
+        if link_path.suffix == ".html":
+            link_path = link_path.with_suffix(".md")
+        if not link_path.is_file():
+            errors.append(
+                f"{path.relative_to(root)}: ローカルリンク先がありません: {target}"
+            )
 
 if errors:
     sys.exit("\n".join(errors))
 
 print(
     f"OK: SUMMARY.md の参照 {len(targets)} 件、Markdown {len(markdown_files)} "
-    f"ファイル、include参照 {include_count} 件を確認しました"
+    f"ファイル、include参照 {include_count} 件、ローカルリンク "
+    f"{local_link_count} 件を確認しました"
 )
 PY

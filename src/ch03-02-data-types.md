@@ -318,5 +318,4 @@ ch02-00-guessing-game-tutorial.html#予想と秘密の数字を比較する
 [stack-and-heap]: ch04-01-what-is-ownership.html#スタックとヒープ
 [vectors]: ch08-01-vectors.html
 [unrecoverable-errors-with-panic]: ch09-01-unrecoverable-errors-with-panic.html
-[appendix_b]: appendix-02-operators.md
-
+[appendix_b]: https://doc.rust-lang.org/book/appendix-02-operators.html
