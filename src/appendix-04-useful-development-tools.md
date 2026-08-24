@@ -34,7 +34,7 @@ rustfixというツールはRustをインストールすると同梱されてお
 Rustでコードを書いたことがある人なら、コンパイラの警告を見たことがあるでしょう。
 たとえば、下のコードを考えます：
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">ファイル名: src/main.rs</span>
 
 ```rust
 fn do_something() {}
@@ -75,7 +75,7 @@ $ cargo fix
 
 *src/main.rs*をもう一度見てみると、`cargo fix`によってコードが変更されていることがわかります。
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">ファイル名: src/main.rs</span>
 
 ```rust
 fn do_something() {}
