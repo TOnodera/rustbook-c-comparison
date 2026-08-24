@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  mdbook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install mdBook
+        run: cargo install mdbook --locked --version 0.4.52
+
+      - name: Check manuscript structure
+        run: bash scripts/check-book.sh
+
+      - name: Build book
+        run: mdbook build
