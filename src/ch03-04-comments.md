@@ -39,6 +39,6 @@ Rustの慣用的なコメントスタイルでは、コメントは2連スラッ
 
 Rustには他の種類のコメント、ドキュメントコメントもあり、それについては第14章の[「Crates.ioにクレートを公開する」][publishing]節で議論します。
 
-[publishing]: ch14-02-publishing-to-crates-io.html
+[publishing]: https://doc.rust-lang.org/book/ch14-02-publishing-to-crates-io.html
 
 
