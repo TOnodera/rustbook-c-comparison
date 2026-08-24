@@ -223,7 +223,6 @@ Cargoの詳細については、[ドキュメント][cargo]を参照してくだ
 
 [installation]: ch01-01-installation.html#インストール
 [toml]: https://toml.io
-[appendix-e]: appendix-05-editions.html
+[appendix-e]: https://doc.rust-lang.org/book/appendix-05-editions.html
 [cargo]: https://doc.rust-lang.org/cargo/
-
 

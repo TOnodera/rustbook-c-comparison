@@ -309,7 +309,6 @@ let s = 3.to_string();
 加えて、コンパイル時に既に確認したので、実行時の振る舞いを確認するコードを書かなくても済みます。
 そうすることで、ジェネリクスの柔軟性を諦めることなくパフォーマンスを向上させます。
 
-[using-trait-objects-that-allow-for-values-of-different-types]: ch17-02-trait-objects.html#トレイトオブジェクトで異なる型の値を許容する
+[using-trait-objects-that-allow-for-values-of-different-types]: ch18-02-trait-objects.html#トレイトオブジェクトで共通の振る舞いを抽象化する
 [methods]: ch05-03-method-syntax.html#メソッドを定義する
-
 
