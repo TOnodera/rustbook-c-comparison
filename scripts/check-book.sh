@@ -32,6 +32,13 @@ for path in markdown_files:
     for target in re.findall(r"\{\{#(?:rustdoc_)?include\s+([^}:]+)", body):
         include_count += 1
         include_path = (path.parent / target).resolve()
+        try:
+            include_path.relative_to(root)
+        except ValueError:
+            errors.append(
+                f"{path.relative_to(root)}: include参照先がリポジトリ外です: {target}"
+            )
+            continue
         if not include_path.is_file():
             errors.append(
                 f"{path.relative_to(root)}: include参照先がありません: {target}"
